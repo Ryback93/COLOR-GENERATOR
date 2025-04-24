@@ -1,5 +1,78 @@
-html {
-    font-size: 16px; /* Set base font size to 16px, 1rem = 16px */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111827;
+    font-family: 'Inter', sans-serif;
+}
+
+#main-selector{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#select-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f2937;
+    gap: 13px;
+    width: 550px;
+    height: 90px;
+}
+
+#harmonies {
+    background-color: #1f2937;
+    height:42px;
+    width:312px;
+    padding: 13px 9px;
+    border: 1px solid #d5d4d8;
+    color: #D5D4D8;
+    border-radius: 6px;
+}
+
+#button {
+    width: 123px;
+    height: 42px;
+    background-color: #3D4B60;
+    border: 1px solid #3D4B60; 
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+}
+
+#colorPicker {
+    width: 61px;
+    height: 43px;
+}
+
+#palette {
+    display: flex;
+    justify-content: center;
+    background-color: #3D4B60;
+    height: 414px;
+    width: 550px;
+}
+
+#hex-display{
+    height: 46px;
+    width: 550px;
+    background-color: #1F2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#hex-display > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 html, body {
@@ -18,7 +91,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 34.375rem; /* 550px = 34.375rem */
+    max-width: 550px; /* Ensure that it doesn't stretch too wide */
 }
 
 #select-container {
@@ -27,31 +100,30 @@ html, body {
     align-items: center;
     justify-content: center;
     background-color: #1f2937;
-    gap: 0.8125rem; /* 13px = 0.8125rem */
-    width: 100%;
-    height: 5.625rem; /* 90px = 5.625rem */
-    padding: 0 1rem; /* 16px = 1rem */
+    gap: 13px;
+    width: 100%; /* Make sure it's responsive */
+    height: 90px;
+    padding: 0 16px; /* Add padding for smaller screens */
     box-sizing: border-box;
 }
 
 #harmonies, #button, #colorPicker {
     width: 100%;
     max-width: 100%;
-    font-size: 0.875rem; /* 14px = 0.875rem */
+    font-size: 14px; /* Make font smaller for mobile */
 }
 
 #palette {
     display: flex;
     justify-content: center;
     background-color: #3D4B60;
-    height: 25.875rem; /* 414px = 25.875rem */
+    height: 414px;
     width: 100%;
-    margin-top: 1rem; /* 16px = 1rem */
-    flex-wrap: wrap;  /* Add wrapping to the palette */
+    margin-top: 16px;
 }
 
 #hex-display {
-    height: 2.875rem; /* 46px = 2.875rem */
+    height: 46px;
     width: 100%;
     background-color: #1F2937;
     display: flex;
@@ -65,53 +137,50 @@ html, body {
     justify-content: center;
 }
 
-/* Update your media query section */
-@media (max-width: 30rem) { /* 480px = 30rem */
-    #main-selector {
-        width: 100%;
-        padding: 0 1rem;
-        box-sizing: border-box;
-    }
-
+@media (max-width: 480px) {
     #select-container {
         flex-direction: column;
-        padding: 1rem;
-        gap: 0.75rem;
+        padding: 16px;
+        gap: 12px;
         height: auto;
     }
 
     #harmonies, #button, #colorPicker {
         width: 100%;
-        height: 3rem; /* Fixed height for better touch targets */
+        max-width: 100%;
     }
 
     #palette {
         flex-direction: column;
+        width: 100%;
         height: auto;
-        padding: 1rem 0;
+        margin-top: 16px;
     }
 
     #color-display {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.5rem;
     }
 
     #color-display div {
-        width: 45%; /* Two columns on mobile */
-        height: 6rem; /* Fixed height */
-        min-height: 6rem;
+        width: 80px;
+        text-align: center;
+        font-size: 11px;
+        line-height: 1.4;
     }
 
-    #hex-display {
-        height: auto;
-        padding: 1rem 0;
+    body, html {
+        padding: 0 8px;
+        box-sizing: border-box;
     }
 
-    #hex-display div {
-        width: 45%; /* Match color display layout */
-        font-size: 0.875rem;
-        padding: 0.5rem 0;
+    #select-container {
+        padding: 10px 0;
+    }
+
+    #palette {
+        width: 100%;
     }
 }
+
