@@ -1,78 +1,5 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #111827;
-    font-family: 'Inter', sans-serif;
-}
-
-#main-selector{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#select-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: #1f2937;
-    gap: 13px;
-    width: 550px;
-    height: 90px;
-}
-
-#harmonies {
-    background-color: #1f2937;
-    height:42px;
-    width:312px;
-    padding: 13px 9px;
-    border: 1px solid #d5d4d8;
-    color: #D5D4D8;
-    border-radius: 6px;
-}
-
-#button {
-    width: 123px;
-    height: 42px;
-    background-color: #3D4B60;
-    border: 1px solid #3D4B60; 
-    border-radius: 4px;
-    color: #fff;
-    font-size: 12px;
-}
-
-#colorPicker {
-    width: 61px;
-    height: 43px;
-}
-
-#palette {
-    display: flex;
-    justify-content: center;
-    background-color: #3D4B60;
-    height: 414px;
-    width: 550px;
-}
-
-#hex-display{
-    height: 46px;
-    width: 550px;
-    background-color: #1F2937;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-#hex-display > div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+html {
+    font-size: 16px; /* Set base font size to 16px, 1rem = 16px */
 }
 
 html, body {
@@ -91,7 +18,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 550px; /* Ensure that it doesn't stretch too wide */
+    max-width: 34.375rem; /* 550px = 34.375rem */
 }
 
 #select-container {
@@ -100,30 +27,30 @@ html, body {
     align-items: center;
     justify-content: center;
     background-color: #1f2937;
-    gap: 13px;
-    width: 100%; /* Make sure it's responsive */
-    height: 90px;
-    padding: 0 16px; /* Add padding for smaller screens */
+    gap: 0.8125rem; /* 13px = 0.8125rem */
+    width: 100%;
+    height: 5.625rem; /* 90px = 5.625rem */
+    padding: 0 1rem; /* 16px = 1rem */
     box-sizing: border-box;
 }
 
 #harmonies, #button, #colorPicker {
     width: 100%;
     max-width: 100%;
-    font-size: 14px; /* Make font smaller for mobile */
+    font-size: 0.875rem; /* 14px = 0.875rem */
 }
 
 #palette {
     display: flex;
     justify-content: center;
     background-color: #3D4B60;
-    height: 414px;
+    height: 25.875rem; /* 414px = 25.875rem */
     width: 100%;
-    margin-top: 16px;
+    margin-top: 1rem; /* 16px = 1rem */
 }
 
 #hex-display {
-    height: 46px;
+    height: 2.875rem; /* 46px = 2.875rem */
     width: 100%;
     background-color: #1F2937;
     display: flex;
@@ -137,11 +64,11 @@ html, body {
     justify-content: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) { /* 480px = 30rem */
     #select-container {
         flex-direction: column;
-        padding: 16px;
-        gap: 12px;
+        padding: 1rem;
+        gap: 0.75rem; /* 12px = 0.75rem */
         height: auto;
     }
 
@@ -154,7 +81,7 @@ html, body {
         flex-direction: column;
         width: 100%;
         height: auto;
-        margin-top: 16px;
+        margin-top: 1rem; /* 16px = 1rem */
     }
 
     #color-display {
@@ -164,23 +91,22 @@ html, body {
     }
 
     #color-display div {
-        width: 80px;
+        width: 5rem; /* 80px = 5rem */
         text-align: center;
-        font-size: 11px;
+        font-size: 0.6875rem; /* 11px = 0.6875rem */
         line-height: 1.4;
     }
 
     body, html {
-        padding: 0 8px;
+        padding: 0 0.5rem; /* 8px = 0.5rem */
         box-sizing: border-box;
     }
 
     #select-container {
-        padding: 10px 0;
+        padding: 0.625rem 0; /* 10px = 0.625rem */
     }
 
     #palette {
         width: 100%;
     }
 }
-
