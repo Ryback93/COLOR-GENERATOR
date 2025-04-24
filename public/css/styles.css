@@ -75,45 +75,42 @@ html, body {
     justify-content: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     #select-container {
         flex-direction: column;
-        width: 90%;
+        width:100%;
+        padding: 16px;
+        gap: 12px;
         height: auto;
-        padding: 20px;
-        gap: 10px;
     }
 
-    #harmonies {
+    #harmonies, #button, #colorPicker {
         width: 100%;
-    }
-
-    #button, #colorPicker {
-        width: 100%;
+        max-width: 100%;
     }
 
     #palette {
         flex-direction: column;
+        width: 100%;
         height: auto;
-        width: 90%;
-        margin-top: 20px;
+        margin-top: 16px;
     }
 
     #color-display {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    #hex-display {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    #hex-display div {
-        width: 100%;
+    #color-display div {
+        width: 80px;
         text-align: center;
+        font-size: 11px;
+        line-height:1.4;
+    }
+
+    body, html {
+        padding: 0 8px;
+        box-sizing: border-box;
     }
 }
-
