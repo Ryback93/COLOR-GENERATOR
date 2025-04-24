@@ -75,10 +75,71 @@ html, body {
     justify-content: center;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111827;
+    font-family: 'Inter', sans-serif;
+}
+
+#main-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 550px; /* Ensure that it doesn't stretch too wide */
+}
+
+#select-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f2937;
+    gap: 13px;
+    width: 100%; /* Make sure it's responsive */
+    height: 90px;
+    padding: 0 16px; /* Add padding for smaller screens */
+    box-sizing: border-box;
+}
+
+#harmonies, #button, #colorPicker {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px; /* Make font smaller for mobile */
+}
+
+#palette {
+    display: flex;
+    justify-content: center;
+    background-color: #3D4B60;
+    height: 414px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+#hex-display {
+    height: 46px;
+    width: 100%;
+    background-color: #1F2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hex-display > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 480px) {
     #select-container {
         flex-direction: column;
-        width:100%;
         padding: 16px;
         gap: 12px;
         height: auto;
@@ -106,11 +167,20 @@ html, body {
         width: 80px;
         text-align: center;
         font-size: 11px;
-        line-height:1.4;
+        line-height: 1.4;
     }
 
     body, html {
         padding: 0 8px;
         box-sizing: border-box;
     }
+
+    #select-container {
+        padding: 10px 0;
+    }
+
+    #palette {
+        width: 100%;
+    }
 }
+
